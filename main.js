@@ -1,3 +1,6 @@
+/*
+First attempt
+
 function getSumOfDigits(integer) {
   let sum = 0;
   let digits =  integer.toString().split('');
@@ -6,3 +9,7 @@ function getSumOfDigits(integer) {
   }
   return sum;
 }
+*/
+
+//Better, cleaner. turn the integer into an array and then convert to numbers, and reduce
+const getSumOfDigits = integer => integer.toString().split('').map(Number).reduce((a, b) => a + b)
